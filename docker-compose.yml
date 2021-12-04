@@ -1,0 +1,12 @@
+version: '3'
+services:
+  go_docker:
+    build:
+      context: .
+      dockerfile: ./build/Dockerfile
+    container_name: go_docker
+    tty: true
+    volumes:
+      - ./app:/go/src
+    ports:
+      - 3002:3000
